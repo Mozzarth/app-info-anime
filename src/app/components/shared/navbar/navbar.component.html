@@ -1,0 +1,31 @@
+<nav class="navBar container">
+  <!-- Logo -->
+  <figure class="navBar-logo">
+    <a [routerLink]="[ 'anime' ]">
+      <img src="assets/img/Logo.png" alt="logo">
+      <!-- <span>AnimeDv</span> -->
+    </a>
+  </figure>
+  <!-- Navegación -->
+  <ul class="nav-link" Router>
+    <a [routerLink]="['animes']">
+      <li routerLinkActive="active">Anime</li>
+    </a>
+    <a [routerLink]="['mangas']">
+      <li routerLinkActive="active">Manga</li>
+    </a>
+  </ul>
+  <!-- Busqueda -->
+  <input class="navBar-search" type="text" placeholder="Buscar">
+</nav>
+
+<!-- Generos -->
+<section class="gender">
+
+  <ul class="gender-list">
+    <a *ngFor= "let gender of getGenders()"  >
+      <li>{{gender}}</li>
+    </a>
+  </ul>
+
+</section>

@@ -1,0 +1,88 @@
+.navBar{
+    /* border: solid red 1px; */
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 10px;
+}
+/* Logo */
+.navBar .navBar-logo figure{
+     display: flex;
+     align-items: center;
+}
+.navBar .navBar-logo figure a {
+    display: flex;
+    align-items: center;
+}
+.navBar img{
+    height: 30px;
+}
+
+
+/* Navegación */
+.navBar .nav-link{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.navBar .nav-link a{
+    text-decoration: none;
+}
+.navBar .nav-link a li {
+    color: var(--color-text);
+    padding-right: 10px;
+    font-size: 13px;
+}
+
+
+/* Buscar */
+
+.navBar .navBar-search{
+    border-radius: 50px;
+    padding-left: 20px;
+    outline: none;
+    background-color: var(--color-secondary);
+    color:  var(--color-text);
+    border: none;
+}
+
+/* Generos */
+
+.gender{
+    
+}
+
+.gender-list{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow: auto;
+}
+
+.gender-list a {
+    flex: 0 0 100px;
+    background-color: var(--color-container);
+    color: var(--color-text) ;
+    margin: 0 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;  
+    padding: 3px 3px;
+    border-radius: 50px;
+    list-style: none;
+    text-decoration: none;
+    text-align:  center;
+    font-size: 13px; 
+    
+}
+
+
+
+
+/* Efectos */
+
+.active{
+    color: var(--color-red) !important;
+}

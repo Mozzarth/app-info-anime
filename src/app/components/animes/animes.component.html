@@ -1,5 +1,15 @@
-<section class="container">
-    <app-card [anime]='anime' *ngFor="let anime of animes">
-        
-    </app-card>
+<section>
+
+    <ng-template #anime>
+        <div class="container">
+            <app-card [anime]='anime' *ngFor="let anime of animesEncontrados"> </app-card>
+        </div>
+    </ng-template>
+
+    <div class="container" *ngIf="animesEncontrados.length == 0; else anime">
+        <app-card [anime]='anime' *ngFor="let anime of animes"> </app-card>
+    </div>
+
+
+
 </section>

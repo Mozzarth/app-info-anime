@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators'
-import { TipoContenido } from '../const/tipo-contenido.enum'
+import { TipoContenido,Gender } from '../const/tipo-contenido.enum'
+import { collectExternalReferences } from '@angular/compiler';
 
 
 @Injectable({
@@ -25,14 +26,17 @@ getAnime(id:number){
 
 }
 
-filterAnime(filter:string = 'nanatzu',type:TipoContenido = TipoContenido.anime){
-  return this.http.get(`${this.URL}/search/${type.toString()}?${filter}&page=1`)
-  // https://api.jikan.moe/v3/search/anime?q=Fate/Zero&page=1
+filterAnime(filter:string = 'nanatzu',type:TipoContenido){
+    return this.http.get(`${this.URL}/search/${type.toString()}?q=${filter}&page=1`)
+              .pipe(map((data:any) =>{
+                return data.results
+              }))
 }
 
 getGender(){
   let genders = []
-   for (let gender in TipoContenido) {
+
+   for (let gender in Gender ) {
     genders.push(gender.toString())
   } 
   return genders

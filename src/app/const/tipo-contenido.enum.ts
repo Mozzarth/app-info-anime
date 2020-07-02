@@ -3,3 +3,9 @@ export enum TipoContenido {
     manga = 'manga'
 
 }
+
+export enum Gender{
+    mecha = 'mecha',
+    action = 'acción',
+    avent = 'Aventura'
+}

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 // Ruta
 import { RUTAS } from './routes'
@@ -29,6 +30,7 @@ import { AnimesComponent } from './components/animes/animes.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot(RUTAS)
   ],

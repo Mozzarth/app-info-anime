@@ -16,14 +16,19 @@
     </a>
   </ul>
   <!-- Busqueda -->
-  <input class="navBar-search" type="text" placeholder="Buscar">
+  <input  class="navBar-search" 
+          [(ngModel)]="filter"
+          type="text" 
+          placeholder="Buscar"
+          (keyup.enter)= 'search()'
+          >
 </nav>
 
 <!-- Generos -->
 <section class="gender">
 
   <ul class="gender-list">
-    <a *ngFor= "let gender of getGenders()"  >
+    <a *ngFor="let gender of getGenders()">
       <li>{{gender}}</li>
     </a>
   </ul>
